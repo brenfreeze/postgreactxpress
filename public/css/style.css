@@ -238,7 +238,6 @@ body {
 }
 .modal-container .modal-title {
     text-transform: uppercase;
-    font-weight: 300;
 }
 .modal-container .modal-body p {
     margin-bottom: 0.5em;

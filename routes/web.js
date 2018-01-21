@@ -27,7 +27,9 @@ router.post('/users', (req, res)=>{
 	const sql = "INSERT INTO users(user_name, user_age) VALUES ($1, $2) RETURNING *"
 
 	pool.query(sql, newUser)
-		.then(result => res.send(result.rows[0]))
+		.then(result => {
+			res.send(result.rows[0])
+		})
 		.catch(e => res.send(e))
 });
 

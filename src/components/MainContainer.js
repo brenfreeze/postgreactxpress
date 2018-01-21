@@ -81,15 +81,18 @@ export class MainContainer extends React.Component{
 
 		axios.post('/users', newUser)
 			.then(res => {
-				console.log(res)
-				this.getUsers;
+				console.log(res.data)
 				this.setState({
-					isOpenModal: false
-				});
+					users: this.state.users.concat(res.data)
+				})
 			})
 			.catch(err => {
 				console.log(err)
 			})
+
+		this.setState({
+			isModalOpen: false
+		});
 	}
 
 	render(){
@@ -104,7 +107,7 @@ export class MainContainer extends React.Component{
 					</div>
 				</div>
 
-				<Modal width="500" height="400" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
+				<Modal width="300" height="350" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
                     <div className="modal-container">
                         <h1 className="modal-title">Add Friend</h1>
                         <div className="modal-body">
