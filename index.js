@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); // Mahalaga pala iteyyyyyyy
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

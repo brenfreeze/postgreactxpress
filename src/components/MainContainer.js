@@ -11,7 +11,11 @@ export class MainContainer extends React.Component{
 
 		this.state = {
 			users: [],
-			user: [],
+			user: {
+				user_id: 0,
+				user_name: "",
+				user_age: 0
+			},
 			isModalOpen: false,
 			newName: "",
 			newAge: 0
@@ -22,6 +26,7 @@ export class MainContainer extends React.Component{
 		this.closeModal = this.closeModal.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.save = this.save.bind(this);
+		this.handleUserEdit = this.handleUserEdit.bind(this);
 	}
 
 	componentDidMount(){
@@ -35,10 +40,20 @@ export class MainContainer extends React.Component{
 					users: res.data,
 					user: res.data[0]
 				})
+
+				console.log(this.state.user['user_name']);
 			})
 			.catch((err)=>{
 				console.log(err)
 			})
+	}
+
+	handleUserEdit(e){
+		this.setState({
+			user: {
+				[e.target.name]: e.target.value
+			} 
+		})
 	}
 
 	handleClick(e){
@@ -100,7 +115,7 @@ export class MainContainer extends React.Component{
 			<div className='container'>
 				<TopBar openModal={this.openModal} closeModal={this.closeModal} />
 				<div className='main'>
-					<UserProfile user={this.state.user} />
+					<UserProfile user={this.state.user} userEdit={this.handleUserEdit} />
 					<div className="users">
 						<h5 className="users-title">Friends</h5>
 						<UsersList users={this.state.users} handle={this.handleClick} />

@@ -289,3 +289,16 @@ body {
     transform: translate(0px, 5px);
     box-shadow: 0px 1px 0px 0px;
 }
+
+.h1-editable {
+  	font: inherit;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid gainsboro;
+    margin-top: 0.5em;
+    outline: none;
+    width: 10em;
+    color: #3e4544;
+}
