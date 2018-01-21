@@ -25,6 +25,10 @@ export class MainContainer extends React.Component{
 	}
 
 	componentDidMount(){
+		this.getUsers();
+	}
+
+	getUsers(){
 		axios.get('/users')
 			.then((res)=>{
 				this.setState({
@@ -70,12 +74,18 @@ export class MainContainer extends React.Component{
 	}
 
 	save(){
-		axios.post('/users', {
+		let newUser = {
 			name: this.state.newName,
-			age: this.state.newAge
-		})
+			age: this.state.newAge.toString()
+		};
+
+		axios.post('/users', newUser)
 			.then(res => {
 				console.log(res)
+				this.getUsers;
+				this.setState({
+					isOpenModal: false
+				});
 			})
 			.catch(err => {
 				console.log(err)

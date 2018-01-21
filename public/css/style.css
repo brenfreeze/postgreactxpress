@@ -163,6 +163,8 @@ body {
 }
 
 .main .users .users-list {
+    max-height: 230px;
+    overflow-y: auto;
     list-style-type: none;
     padding: 0em;
 }

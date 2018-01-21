@@ -23,7 +23,12 @@ router.get('/users', (req, res) => {
 });
 
 router.post('/users', (req, res)=>{
-	res.send(JSON.parse(req))
+	const newUser = Object.values(req.body);
+	const sql = "INSERT INTO users(user_name, user_age) VALUES ($1, $2) RETURNING *"
+
+	pool.query(sql, newUser)
+		.then(result => res.send(result.rows[0]))
+		.catch(e => res.send(e))
 });
 
 module.exports = router;
