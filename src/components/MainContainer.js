@@ -72,11 +72,11 @@ export class MainContainer extends React.Component{
 
 	handleChange(e){
 		this.setState({
-			[e.target.name]: this.tryParse(e.target.value)
+			[e.target.name]: MainContainer.tryParse(e.target.value)
 		})
 	}
 
-	tryParse(str){
+	static tryParse(str){
 		if(str !== null) {
 			if(str.length > 0) {
 				if (!isNaN(str)) {

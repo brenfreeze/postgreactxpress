@@ -5,7 +5,7 @@ const {Pool, Client} = require('pg');
 const pool = new Pool({
 	user: 'postgres',
 	host: 'localhost',
-	database: 'ex1_webpack',
+	database: 'postgres',
 	password: 'pass',
 	port: 5432,
 });
