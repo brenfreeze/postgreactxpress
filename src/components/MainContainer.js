@@ -27,6 +27,7 @@ export class MainContainer extends React.Component{
 		this.handleChange = this.handleChange.bind(this);
 		this.save = this.save.bind(this);
 		this.handleUserEdit = this.handleUserEdit.bind(this);
+		this.getUsers = this.getUsers.bind(this);
 	}
 
 	componentDidMount(){
@@ -40,8 +41,6 @@ export class MainContainer extends React.Component{
 					users: res.data,
 					user: res.data[0]
 				})
-
-				console.log(this.state.user['user_name']);
 			})
 			.catch((err)=>{
 				console.log(err)
@@ -49,11 +48,17 @@ export class MainContainer extends React.Component{
 	}
 
 	handleUserEdit(e){
-		this.setState({
-			user: {
-				[e.target.name]: e.target.value
-			} 
-		})
+		this.setState(prev => {
+			return {
+				user: {
+					user_id: prev.user.user_id,
+					user_name: (e.target.name === "user_name") ? e.target.value : prev.user.user_name,
+					user_age: (e.target.name === "user_age") ? e.target.value : prev.user.user_age
+				}
+			}
+		});
+
+		e.persist();
 	}
 
 	handleClick(e){
@@ -72,11 +77,11 @@ export class MainContainer extends React.Component{
 
 	handleChange(e){
 		this.setState({
-			[e.target.name]: this.tryParse(e.target.value)
+			[e.target.name]: MainContainer.tryParse(e.target.value)
 		})
 	}
 
-	tryParse(str){
+	static tryParse(str){
 		if(str !== null) {
 			if(str.length > 0) {
 				if (!isNaN(str)) {
@@ -115,7 +120,7 @@ export class MainContainer extends React.Component{
 			<div className='container'>
 				<TopBar openModal={this.openModal} closeModal={this.closeModal} />
 				<div className='main'>
-					<UserProfile user={this.state.user} userEdit={this.handleUserEdit} />
+					<UserProfile user={this.state.user} userEdit={this.handleUserEdit} users={this.getUsers} />
 					<div className="users">
 						<h5 className="users-title">Friends</h5>
 						<UsersList users={this.state.users} handle={this.handleClick} />
