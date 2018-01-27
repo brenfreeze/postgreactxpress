@@ -316,3 +316,11 @@ body {
     width: 10em;
     color: #3e4544;
 }
+
+.inline {
+    display: inline-flex;
+}
+
+.ml {
+    margin-left: .5em
+}
