@@ -4,7 +4,6 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack src/App.js public/js/bundle.js",
         "watch": "webpack --watch",
         "dev": "node index.js"
     },
