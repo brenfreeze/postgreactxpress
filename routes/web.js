@@ -3,20 +3,20 @@ const router = express.Router();
 const {Pool, Client} = require('pg');
 
 const pool = new Pool({
-	user: 'postgres',
-	host: 'localhost',
-	database: 'postgres',
-	password: 'pass',
+	user: 'rawncemryjeyrf', //postgres
+	host: 'ec2-54-235-240-126.compute-1.amazonaws.com', //localhost
+	database: 'de3bq54a7ebdbc', //postgres
+	password: 'edf8ed58d14b82de2e8db230090321b9192d269fcbad724cd41c2a96eeb00520', //pass
 	port: 5432,
 });
 
 pool.connect();
 
 const client = new Client({
-	user: 'postgres',
-	host: 'localhost',
-	database: 'postgres',
-	password: 'pass',
+	user: 'rawncemryjeyrf', //postgres
+	host: 'ec2-54-235-240-126.compute-1.amazonaws.com', //localhost
+	database: 'de3bq54a7ebdbc', //postgres
+	password: 'edf8ed58d14b82de2e8db230090321b9192d269fcbad724cd41c2a96eeb00520', //pass
 	port: 5432,
 });
 
