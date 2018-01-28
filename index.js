@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser'); // Mahalaga pala iteyyyyyyy
+const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 app.use(morgan('dev'));
