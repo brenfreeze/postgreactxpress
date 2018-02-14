@@ -79,7 +79,7 @@ export class MainContainer extends React.Component{
 		this.setState({
 			[e.target.name]: MainContainer.tryParse(e.target.value)
 		})
-	}
+}
 
 	static tryParse(str){
 		if(str !== null) {
