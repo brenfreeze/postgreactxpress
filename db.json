@@ -221,6 +221,6 @@
       "description": "The TestItem is, again, DEFECTIVE.",
       "quality": "Test Quality",
       "production": "Test Production"
-    },
+    }
   ]
 }
