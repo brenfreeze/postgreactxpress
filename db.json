@@ -4,70 +4,70 @@
       "item": 1,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 2,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 3,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 4,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 5,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 6,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 7,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 8,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 9,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     },
     {
       "item": 10,
       "batchCode": "TestBatch",
       "itemCategory": "TestCategory",
-      "description: "This is a test Item Description",
+      "description": "This is a test Item Description",
       "supplier": "Mr. Krabs"
     }
   ],
